@@ -1,0 +1,14 @@
+﻿column_name,data_type,description
+transaction_id,STRING,Join key to master CSV
+synthetic_case_id,STRING,Case/scenario grouping key
+is_fraud_ground_truth,BOOLEAN,TRUE/FALSE; hidden from application
+ground_truth_class,ENUM,NORMAL|FRAUD|BENIGN_ANOMALY
+ground_truth_scenario,ENUM,NONE|ACCOUNT_TAKEOVER|NEW_BENEFICIARY_HIGH_VALUE|VELOCITY_BURST|IMPOSSIBLE_TRAVEL|SHARED_DEVICE|MULE_BENEFICIARY|CARD_NOT_PRESENT|CREDENTIAL_RESET_ABUSE|CORPORATE_APPROVAL_ANOMALY|CROSS_BORDER_ANOMALY
+difficulty,ENUM,EASY|MEDIUM|HARD
+injected_anomaly_fields,STRING LIST,Pipe-delimited fields intentionally manipulated
+expected_rule_ids,STRING LIST,Expected rules that should trigger
+expected_key_evidence,STRING,Short expected evidence summary
+expected_counter_evidence,STRING,Evidence that weakens the fraud hypothesis
+expected_analyst_action,ENUM,ALLOW|MONITOR|STEP_UP_VERIFY|HOLD_AND_REVIEW|ESCALATE
+generator_seed,INTEGER,Reproducibility
+generator_version,STRING,Reproducibility

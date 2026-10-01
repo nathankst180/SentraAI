@@ -1,0 +1,16 @@
+﻿parameter,recommended_value,notes
+transaction_rows,2500,"Accept 2400-2600. Generate programmatically, not by manually pasting 13 batches."
+unique_customers,120,Recommended 100-140.
+unique_beneficiaries,180,Recommended 150-220; deliberately reuse some for network scenarios.
+unique_devices,145,Recommended 120-170; a small subset may be shared for seeded scenarios.
+time_window,90 days,Preserve chronological histories per customer.
+normal_ground_truth,~87%,"Synthetic workshop target, not Rawbank actual fraud rate."
+fraud_ground_truth,~8%,"Synthetic workshop target, not Rawbank actual fraud rate."
+benign_anomaly_ground_truth,~5%,Critical for false-positive testing.
+alert_rate,14-18%,Should exceed actual fraud rate to create false positives and investigation work.
+currency_mix,CDF ~45%; USD ~50%; EUR ~5%,Synthetic only; deliberately supports multi-currency analytics.
+customer_type_mix,Retail 70%; SME 20%; Corporate 10%,Synthetic only; tuned for workshop variety.
+channel_mix,Illicocash 25%; RawbankOnline 23%; Card 20%; ATM 12%; Visa Direct 6%; Branch/Agent 5%; SIOP 5%; Swift Light 4%,Synthetic only; tuned so every public Rawbank channel is represented.
+null_policy,Only optional/channel-specific columns may be null,"Never null transaction_id, timestamp, customer_id, account_id, amount, currency, channel."
+batch_generation,200 rows per batch allowed,Use a single persistent seed/state so IDs and entity histories remain consistent across batches.
+ground_truth_visibility,NEVER load ground-truth CSV into the Copilot or Command Centre,Use only for evaluator/testing after the build.
