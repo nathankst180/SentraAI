@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RAWBANK SentraAI | Direction du Contrôle des Risques & Surveillance Bancaire (DRC)",
-  description: "Système Central de Surveillance des Risques et Intelligence Anti-Fraude SentraAI &bull; Rawbank DRC",
+  title: "RAWBANK SentraAI | Risk Control & Banking Fraud Surveillance Division (DRC)",
+  description: "Centralized Risk Surveillance System and SentraAI Fraud Intelligence • Rawbank DRC",
 };
 
 export default function RootLayout({
@@ -24,15 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
-        <meta name="darkreader-lock" content="darkreader-lock" />
-        <meta name="color-scheme" content="dark" />
+        <meta name="color-scheme" content="light" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#07101D]" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col bg-[#F8FAFC] text-slate-900" suppressHydrationWarning>
         {children}
       </body>
     </html>

@@ -51,9 +51,9 @@ from retrieval import retrieval_engine
 from rules_meta import RULES_CATALOG, COUNTER_EVIDENCE_CATALOG
 
 GROQ_MODELS = [
-    "openai/gpt-oss-120b",     # Most capable available model
-    "openai/gpt-oss-20b",      # Faster / fallback
-    "qwen/qwen3.8-27b",        # Additional fallback
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b",
 ]
 
 
